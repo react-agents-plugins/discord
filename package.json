@@ -1,5 +1,5 @@
 {
-  "name": "discord",
+  "name": "@react-agents-plugins/discord",
   "version": "0.0.1",
   "main": "discord.tsx",
   "scripts": {
