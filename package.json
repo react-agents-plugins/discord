@@ -15,5 +15,19 @@
     "url": "https://github.com/react-agents-registry/discord/issues"
   },
   "homepage": "https://github.com/react-agents-registry/discord#readme",
-  "description": ""
+  "description": "",
+  "pluginConfig": {
+    "type": "react-agents:1.0.0",
+    "parameters": {
+      "token": {
+        "type": "string",
+        "examples": ["YOUR_DISCORD_BOT_TOKEN"]
+      },
+      "channels": {
+        "type": "array",
+        "items": { "type": "string" },
+        "examples": [["general", "voice"]]
+      }
+    }
+  }
 }
