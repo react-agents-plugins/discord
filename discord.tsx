@@ -2,11 +2,19 @@ import React, { useContext, useEffect } from 'react';
 import { useAgent, useAuthToken, useConversation } from 'react-agents';
 import type {
   DiscordArgs,
-  DiscordProps,
 } from '../../types';
 import {
   AppContext,
 } from '../../context';
+
+type DiscordRoomSpec = RegExp | string;
+type DiscordRoomSpecs = DiscordRoomSpec | DiscordRoomSpec[];
+type DiscordProps = {
+  token: string;
+  channels?: DiscordRoomSpecs;
+  dms?: DiscordRoomSpecs;
+  userWhitelist?: string[];
+};
 
 export const Discord: React.FC<DiscordProps> = (props: DiscordProps) => {
   const {
